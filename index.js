@@ -48,15 +48,15 @@ Calculator.divide(10, 5);
 
 
 function actionApplyer(base, array) {
-  if (array && array.length) {
+  // if (array && array.length) {
     let output = base;
     for (let f of arrayOfTransforms) {
       output = f(output);
-    }
+    // }
     return `${output}`;
-  } else {
-    return base;
-  }
+  // } else {
+  //   return base;
+  // }
 }
 console.log(actionApplyer(0, []));
 let arrayOfTransforms = [
