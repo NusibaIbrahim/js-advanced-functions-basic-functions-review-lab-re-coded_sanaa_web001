@@ -48,7 +48,7 @@ Calculator.divide(10, 5);
 
 
 function actionApplyer(base, array) {
-  if (arrayOfTransforms) {
+  if (array && array.length) {
     let output = base;
     for (let f of arrayOfTransforms) {
       output = f(output);
