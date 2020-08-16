@@ -47,17 +47,9 @@ Calculator.multiply(1, 3);
 Calculator.divide(10, 5);
 
 
-function actionApplyer(base, array) {
-  if (array && array.length) {
-    let output = base;
-    for (let f of arrayOfTransforms) {
-      output = f(output);
-    }
-    return `${output}`;
-  } else {
-    return base;
-  }
-}
+const actionApplyer = (base, array) =>
+  array.reduce((accumulatedOutput, fun) => fun(accumulatedOutput), base);
+  
 console.log(actionApplyer(0, []));
 let arrayOfTransforms = [
   function (a) {
